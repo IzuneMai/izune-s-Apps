@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: none;
@@ -6,7 +6,7 @@
 
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ body{
     background: #0e1720;
 }
 
-.container{
+.container {
     position: relative;
     width: 400px;
     height: 105px;
@@ -26,7 +26,7 @@ body{
     transition: 0.6s ease-out;
 }
 
-.search-box{
+.search-box {
     width: 100%;
     height: min-content;
     display: flex;
@@ -34,24 +34,24 @@ body{
     justify-content: space-between;
 }
 
-.search-box input{
+.search-box input {
     color: #0e1720;
     width: 80%;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
     padding-left: 32px;
-    outline: none;  
+    outline: none;
 }
 
-.search-box input::placeholder{
+.search-box input::placeholder {
     font-size: 20px;
     font-weight: 500;
     color: #0e1720;
     text-transform: capitalize;
 }
 
-.search-box button{
+.search-box button {
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -62,27 +62,27 @@ body{
     transform: 0.4s ease;
 }
 
-.search-box button:hover{
+.search-box button:hover {
     color: #fff;
     background: #0e1720
 }
 
-.search-box i{
+.search-box i {
     position: absolute;
     color: #0e1720;
     font-size: 28px;
 }
 
-.weather-box{
+.weather-box {
     text-align: center;
 }
 
-.weather-box img{
+.weather-box img {
     width: 60%;
     margin-top: 30px;
 }
 
-.weather-box .temperature{
+.weather-box .temperature {
     position: relative;
     color: #0e1720;
     font-size: 4rem;
@@ -91,27 +91,28 @@ body{
     margin-left: -16px;
 }
 
-.weather-box .temperature span{
+.weather-box .temperature span {
     position: absolute;
     margin-left: 4px;
     font-size: 1.5rem;
 }
 
-.weather-box .description{
+.weather-box .description {
     color: #0e1720;
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
 }
 
-.weather-details{
+.weather-details {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-.weather-details .humidity, .weather-details .wind{
+.weather-details .humidity,
+.weather-details .wind {
     display: flex;
     align-items: center;
     width: 50%;
@@ -119,36 +120,36 @@ body{
 }
 
 
-.weather-details .humidity{
+.weather-details .humidity {
     padding-left: 20px;
     justify-content: flex-start;
 }
 
-.weather-details .wind{
+.weather-details .wind {
     padding-right: 20px;
     justify-content: flex-end;
 }
 
-.weather-details i{
+.weather-details i {
     color: #0e1720;
     font-size: 26px;
     margin-top: 10px;
     margin-top: 6px;
 }
 
-.weather-details span{
+.weather-details span {
     color: #0e1720;
     font-size: 22px;
     font-weight: 500;
 }
 
-.weather-details p{
+.weather-details p {
     color: #0e1720;
     font-size: 14px;
     font-weight: 500;
 }
 
-.not-found{
+.not-found {
     width: 100%;
     text-align: center;
     margin-top: 50px;
@@ -157,30 +158,76 @@ body{
     display: none;
 }
 
-.not-found img{
+.not-found img {
     width: 70%;
 }
 
-.not-found p{
+.not-found p {
     color: #0e1720;
     font-size: 22px;
     font-weight: 500;
     margin-top: 12px;
 }
 
-.weather-box, .weather-details{
+.weather-box,
+.weather-details {
     scale: 0;
     opacity: 0;
 }
 
-.fadeIn{
+.fadeIn {
     animation: 0.5s fadeIn forwards;
     animation-delay: 0.5s;
 }
 
-@keyframes fadeIn{
+.backBtn {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    color: #212121;
+    background: #e7e7e7;
+    border-radius: 50%;
+    font-size: 20px;
+    transform: 0.4s ease;
+    border: none;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backBtn:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
     to {
         scale: 1;
         opacity: 1;
+    }
+}
+
+@media (max-width: 376px) {
+    .backBtn {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        margin: 10px;
     }
 }

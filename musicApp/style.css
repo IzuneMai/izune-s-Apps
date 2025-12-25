@@ -142,6 +142,32 @@ h3 {
     top: 3px;
 }
 
+.backBtn {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    color: #212121;
+    background: #e7e7e7;
+    border-radius: 50%;
+    font-size: 20px;
+    transform: 0.4s ease;
+    border: none;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backBtn:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
 @media (max-width: 375px) {
     .container {
         height: 490px;
@@ -169,6 +195,19 @@ h3 {
         width: 170px;
         margin-top: 30px;
         left: 0;
-        
+
+    }
+
+    .backBtn {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
